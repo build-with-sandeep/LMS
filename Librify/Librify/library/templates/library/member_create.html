@@ -1,0 +1,16 @@
+<!-- member_create.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+</head>
+<body>
+    <h1>Add Member</h1>
+    <form method="post" action="{% url 'member_create' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Member</button>
+    </form>
+</body>
+</html>
